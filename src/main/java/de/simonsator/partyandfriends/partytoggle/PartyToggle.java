@@ -30,6 +30,6 @@ public class PartyToggle extends PartySubCommand {
 
 	@Override
 	public boolean hasAccess(int pPermissionHeight) {
-		return false;
+		return true;
 	}
 }

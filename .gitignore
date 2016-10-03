@@ -1,2 +1,16 @@
 
 Party-Toggle.iml
+
+*.jar
+
+target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+
+target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+
+target/maven-archiver/pom.properties
+
+target/classes/plugin.yml
+
+*.class
+
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
