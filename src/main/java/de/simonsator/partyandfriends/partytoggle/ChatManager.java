@@ -26,13 +26,16 @@ public class ChatManager implements Listener {
 	@EventHandler
 	public void onWrite(ChatEvent pEvent) {
 		final OnlinePAFPlayer p = PAFPlayerManager.getInstance().getPlayer((ProxiedPlayer) pEvent.getSender());
+		String message = pEvent.getMessage();
+		if (message.startsWith("/"))
+			return;
 		if (!players.contains(p.getUniqueId()))
 			return;
 		final PlayerParty party = PartyManager.getInstance().getParty(p);
 		if (party == null)
 			return;
 		pEvent.setCancelled(true);
-		chatCommand.onCommand(p, pEvent.getMessage().split(" "));
+		chatCommand.onCommand(p, message.split(" "));
 	}
 
 	public boolean changeState(UUID pUUID) {
