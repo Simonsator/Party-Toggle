@@ -25,13 +25,9 @@ public class PTMain extends Plugin {
 		ChatManager chatManager = new ChatManager();
 		ProxyServer.getInstance().getPluginManager().registerListener(this, chatManager);
 		ProxyServer.getInstance().getPluginManager().registerListener(this, new RemoveManager(chatManager));
-		try {
-			Main.getInstance().getPartyCommand().addCommand(
-					new PartyToggle(config.getStringList("Names").toArray(new String[0]),
-							config.getInt("Priority"), config.getString("Messages.Help"), chatManager, config));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		Main.getInstance().getPartyCommand().addCommand(
+				new PartyToggle(config.getStringList("Names").toArray(new String[0]),
+						config.getInt("Priority"), config.getString("Messages.Help"), chatManager, config));
 	}
 
 }
