@@ -45,4 +45,7 @@ public class ChatManager implements Listener {
 		return true;
 	}
 
+	public void remove(UUID pUUID) {
+		players.remove(pUUID);
+	}
 }

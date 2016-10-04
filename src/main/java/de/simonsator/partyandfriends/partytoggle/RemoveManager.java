@@ -17,6 +17,6 @@ public class RemoveManager implements Listener {
 
 	@EventHandler
 	public void onLeave(PlayerDisconnectEvent pEvent) {
-		CHAT_MANAGER.changeState(pEvent.getPlayer().getUniqueId());
+		CHAT_MANAGER.remove(pEvent.getPlayer().getUniqueId());
 	}
 }
