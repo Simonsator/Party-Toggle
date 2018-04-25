@@ -1,6 +1,7 @@
 package de.simonsator.partyandfriends.partytoggle;
 
 import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
+import net.md_5.bungee.api.plugin.Plugin;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,8 +12,8 @@ import java.io.IOException;
  */
 public class PTConfig extends ConfigurationCreator {
 
-	protected PTConfig(File file) throws IOException {
-		super(file);
+	protected PTConfig(File file, Plugin pPlugin) throws IOException {
+		super(file, pPlugin);
 		readFile();
 		loadDefaultValues();
 		saveFile();
@@ -28,10 +29,5 @@ public class PTConfig extends ConfigurationCreator {
 				"&7From now on you can write again normal into the chat");
 		set("Messages.Help",
 				"&8/&5Party toggle  &8- &7Toggles if you write directly into the party chat");
-	}
-
-	@Override
-	public void reloadConfiguration() throws IOException {
-		configuration = (new PTConfig(FILE)).getCreatedConfiguration();
 	}
 }
