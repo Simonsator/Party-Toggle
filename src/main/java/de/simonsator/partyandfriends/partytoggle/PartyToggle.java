@@ -4,6 +4,8 @@ import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
 import de.simonsator.partyandfriends.api.party.abstractcommands.PartySubCommand;
 import net.md_5.bungee.config.Configuration;
 
+import java.util.List;
+
 /**
  * @author Simonsator
  * @version 1.0.0 03.10.16
@@ -12,8 +14,8 @@ public class PartyToggle extends PartySubCommand {
 	private final ChatManager CHAT_MANAGER;
 	private final Configuration CONFIG;
 
-	protected PartyToggle(String[] pCommands, int pPriority, String pHelp, ChatManager pChatManager, Configuration pConfig) {
-		super(pCommands, pPriority, pHelp);
+	protected PartyToggle(List<String> pCommands, int pPriority, String pHelp, ChatManager pChatManager, Configuration pConfig) {
+		super(pCommands, pPriority, pHelp, pConfig.getString("Permission"));
 		CHAT_MANAGER = pChatManager;
 		CONFIG = pConfig;
 	}

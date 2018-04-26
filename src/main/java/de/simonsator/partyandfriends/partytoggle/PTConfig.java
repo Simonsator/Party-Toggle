@@ -23,6 +23,7 @@ public class PTConfig extends ConfigurationCreator {
 	private void loadDefaultValues() {
 		set("Names", "toggle", "toggle-chat");
 		set("Priority", 1000);
+		set("Permission", "");
 		set("Messages.Activated",
 				"&7From now on all you write will be automatically written into the party chat, as long as you are in a party");
 		set("Messages.Disabled",

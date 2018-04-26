@@ -26,7 +26,7 @@ public class PTMain extends PAFExtension {
 		ProxyServer.getInstance().getPluginManager().registerListener(this, chatManager);
 		ProxyServer.getInstance().getPluginManager().registerListener(this, new RemoveManager(chatManager));
 		PartyCommand.getInstance().addCommand(
-				new PartyToggle(config.getStringList("Names").toArray(new String[0]),
+				new PartyToggle(config.getStringList("Names"),
 						config.getInt("Priority"), config.getString("Messages.Help"), chatManager, config));
 		registerAsExtension();
 	}
