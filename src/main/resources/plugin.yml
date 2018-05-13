@@ -3,4 +3,4 @@ version: ${project.version}
 author: Simonsator
 depends: [PartyAndFriends]
 main: de.simonsator.partyandfriends.partytoggle.PTMain
-description: An add-on for party and friends to add /friend acceptall and /friend denyall
+description: An add-on for party and friends to add /party toggle
