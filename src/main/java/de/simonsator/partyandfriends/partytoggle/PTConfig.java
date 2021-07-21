@@ -1,23 +1,19 @@
 package de.simonsator.partyandfriends.partytoggle;
 
+import de.simonsator.partyandfriends.api.PAFExtension;
 import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
-import net.md_5.bungee.api.plugin.Plugin;
 
 import java.io.File;
 import java.io.IOException;
 
-/**
- * @author Simonsator
- * @version 1.0.0 03.10.16
- */
 public class PTConfig extends ConfigurationCreator {
 
-	protected PTConfig(File file, Plugin pPlugin) throws IOException {
+	protected PTConfig(File file, PAFExtension pPlugin) throws IOException {
 		super(file, pPlugin);
 		readFile();
 		loadDefaultValues();
 		saveFile();
-		process(configuration);
+		process();
 	}
 
 	private void loadDefaultValues() {
