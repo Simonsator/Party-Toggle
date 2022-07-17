@@ -1,7 +1,7 @@
-package de.simonsator.partyandfriends.partytoggle;
+package de.simonsator.partyandfriends.partytoggle.velocity;
 
-import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
-import de.simonsator.partyandfriends.api.party.abstractcommands.PartySubCommand;
+import de.simonsator.partyandfriends.velocity.api.pafplayers.OnlinePAFPlayer;
+import de.simonsator.partyandfriends.velocity.api.party.abstractcommands.PartySubCommand;
 
 import java.util.List;
 
