@@ -96,7 +96,7 @@
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>Party-Toggle-Velocity</artifactId>
-			<version>1.0.5</version>
+			<version>1.0.5R</version>
 		</dependency>
 	</dependencies>
 	<distributionManagement>
