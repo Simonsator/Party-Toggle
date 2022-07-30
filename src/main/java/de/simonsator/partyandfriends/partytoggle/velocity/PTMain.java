@@ -12,7 +12,6 @@ public class PTMain extends PAFExtension {
 
 	public PTMain(Path folder) {
 		super(folder);
-		onEnable();
 	}
 
 	@Override
