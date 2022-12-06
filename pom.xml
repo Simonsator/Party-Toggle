@@ -6,7 +6,7 @@
 
 	<groupId>de.simonsator</groupId>
 	<artifactId>Party-Toggle</artifactId>
-	<version>1.0.5</version>
+	<version>1.0.6</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -106,7 +106,7 @@
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>Party-Toggle-Velocity</artifactId>
-			<version>1.0.5R</version>
+			<version>1.0.6</version>
 		</dependency>
 	</dependencies>
 	<distributionManagement>
