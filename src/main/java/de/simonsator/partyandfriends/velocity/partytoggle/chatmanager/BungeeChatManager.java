@@ -1,29 +1,27 @@
 package de.simonsator.partyandfriends.velocity.partytoggle.chatmanager;
 
-import de.simonsator.partyandfriends.api.pafplayers.PAFPlayerManager;
-import net.md_5.bungee.api.connection.ProxiedPlayer;
-import net.md_5.bungee.api.event.ChatEvent;
-import net.md_5.bungee.api.event.PlayerDisconnectEvent;
-import net.md_5.bungee.api.plugin.Listener;
-import net.md_5.bungee.event.EventHandler;
+import com.velocitypowered.api.event.Subscribe;
+import com.velocitypowered.api.event.connection.DisconnectEvent;
+import com.velocitypowered.api.event.player.PlayerChatEvent;
+import com.velocitypowered.api.proxy.Player;
+import de.simonsator.partyandfriends.velocity.api.pafplayers.PAFPlayerManager;
 
-public class BungeeChatManager extends UniversalChatManager implements Listener {
-	@EventHandler
-	public void onWrite(ChatEvent pEvent) {
-		if (!(pEvent.getSender() instanceof ProxiedPlayer)) {
-			return;
-		}
-		ProxiedPlayer player = (ProxiedPlayer) pEvent.getSender();
+public class BungeeChatManager extends UniversalChatManager {
+	@Subscribe
+	public void onWrite(PlayerChatEvent pEvent) {
+		Player player = pEvent.getPlayer();
 		String message = pEvent.getMessage();
 		if (message.startsWith("/"))
 			return;
 		if (hasPartyChatNotEnabled(player.getUniqueId()))
 			return;
-		pEvent.setCancelled(executeChat(PAFPlayerManager.getInstance().getPlayer(player.getUniqueId()), message));
+		if (executeChat(PAFPlayerManager.getInstance().getPlayer(player.getUniqueId()), message)) {
+			pEvent.setResult(PlayerChatEvent.ChatResult.denied());
+		}
 	}
 
-	@EventHandler
-	public void onLeave(PlayerDisconnectEvent pEvent) {
+	@Subscribe
+	public void onLeave(DisconnectEvent pEvent) {
 		remove(pEvent.getPlayer().getUniqueId());
 	}
 }

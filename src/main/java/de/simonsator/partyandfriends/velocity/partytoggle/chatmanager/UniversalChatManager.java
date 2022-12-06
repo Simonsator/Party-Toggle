@@ -1,10 +1,10 @@
 package de.simonsator.partyandfriends.velocity.partytoggle.chatmanager;
 
-import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
-import de.simonsator.partyandfriends.api.pafplayers.PAFPlayer;
-import de.simonsator.partyandfriends.api.party.PartyManager;
-import de.simonsator.partyandfriends.api.party.PlayerParty;
-import de.simonsator.partyandfriends.party.command.PartyChat;
+import de.simonsator.partyandfriends.velocity.api.pafplayers.OnlinePAFPlayer;
+import de.simonsator.partyandfriends.velocity.api.pafplayers.PAFPlayer;
+import de.simonsator.partyandfriends.velocity.api.party.PartyManager;
+import de.simonsator.partyandfriends.velocity.api.party.PlayerParty;
+import de.simonsator.partyandfriends.velocity.party.command.PartyChat;
 
 import java.util.HashSet;
 import java.util.UUID;
