@@ -6,7 +6,7 @@ import com.velocitypowered.api.event.player.PlayerChatEvent;
 import com.velocitypowered.api.proxy.Player;
 import de.simonsator.partyandfriends.velocity.api.pafplayers.PAFPlayerManager;
 
-public class BungeeChatManager extends UniversalChatManager {
+public class VelocityChatManager extends UniversalChatManager {
 	@Subscribe
 	public void onWrite(PlayerChatEvent pEvent) {
 		Player player = pEvent.getPlayer();

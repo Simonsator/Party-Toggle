@@ -4,7 +4,7 @@ import de.simonsator.partyandfriends.velocity.api.PAFExtension;
 import de.simonsator.partyandfriends.velocity.api.adapter.ServerSoftware;
 import de.simonsator.partyandfriends.velocity.main.Main;
 import de.simonsator.partyandfriends.velocity.party.command.PartyCommand;
-import de.simonsator.partyandfriends.velocity.partytoggle.chatmanager.BungeeChatManagerFactory;
+import de.simonsator.partyandfriends.velocity.partytoggle.chatmanager.VelocityChatManagerFactory;
 import de.simonsator.partyandfriends.velocity.partytoggle.chatmanager.UniversalChatManager;
 
 import java.io.File;
@@ -25,7 +25,7 @@ public class PTMain extends PAFExtension {
 			ServerSoftware serverSoftware = getAdapter().getServerSoftware();
 			switch (serverSoftware) {
 				case VELOCITY:
-					chatManager = BungeeChatManagerFactory.createChatManager();
+					chatManager = VelocityChatManagerFactory.createChatManager();
 					break;
 				default:
 					throw new RuntimeException("Unsupported server software " + serverSoftware);

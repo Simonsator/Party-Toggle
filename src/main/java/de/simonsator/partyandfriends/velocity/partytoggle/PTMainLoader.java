@@ -11,7 +11,7 @@ import de.simonsator.partyandfriends.velocity.main.PAFPlugin;
 
 import java.nio.file.Path;
 
-@Plugin(id = "party-toggle-loader", name = "Party Toggle Loader", version = "1.0.5",
+@Plugin(id = "party-toggle-loader", name = "Party Toggle Loader", version = "1.0.6",
 		description = "Loads Party Toggle for Party and Friends", authors = {"Simonsator"}, dependencies = {@Dependency(id = "partyandfriends")})
 public class PTMainLoader {
 	private final Path folder;
@@ -24,7 +24,7 @@ public class PTMainLoader {
 	@Subscribe
 	public void onProxyInitialization(ProxyInitializeEvent event) {
 		PAFPlugin.loadExtension(new VelocityExtensionLoadingInfo(new PTMain(folder),
-				"party-toggle-for-party-and-friends", "Loads Party Toggle for Party and Friends", "1.0.5", "Simonsator"));
+				"party-toggle-for-party-and-friends", "Loads Party Toggle for Party and Friends", "1.0.6", "Simonsator"));
 	}
 
 }
