@@ -1,11 +1,11 @@
-package de.simonsator.partyandfriends.partytoggle.velocity;
+package de.simonsator.partyandfriends.velocity.partytoggle;
 
 import de.simonsator.partyandfriends.velocity.api.PAFExtension;
 import de.simonsator.partyandfriends.velocity.api.adapter.ServerSoftware;
 import de.simonsator.partyandfriends.velocity.main.Main;
 import de.simonsator.partyandfriends.velocity.party.command.PartyCommand;
-import de.simonsator.partyandfriends.partytoggle.chatmanager.BungeeChatManagerFactory;
-import de.simonsator.partyandfriends.partytoggle.chatmanager.UniversalChatManager;
+import de.simonsator.partyandfriends.velocity.partytoggle.chatmanager.BungeeChatManagerFactory;
+import de.simonsator.partyandfriends.velocity.partytoggle.chatmanager.UniversalChatManager;
 
 import java.io.File;
 import java.io.IOException;

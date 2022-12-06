@@ -1,4 +1,4 @@
-package de.simonsator.partyandfriends.partytoggle.velocity;
+package de.simonsator.partyandfriends.velocity.partytoggle;
 
 import com.google.inject.Inject;
 import com.velocitypowered.api.event.Subscribe;

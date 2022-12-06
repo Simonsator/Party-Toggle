@@ -1,4 +1,4 @@
-package de.simonsator.partyandfriends.partytoggle.velocity;
+package de.simonsator.partyandfriends.velocity.partytoggle;
 
 
 import de.simonsator.partyandfriends.velocity.api.PAFExtension;

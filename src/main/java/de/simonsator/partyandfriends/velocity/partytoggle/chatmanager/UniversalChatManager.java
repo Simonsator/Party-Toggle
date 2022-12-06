@@ -1,4 +1,4 @@
-package de.simonsator.partyandfriends.partytoggle.velocity.chatmanager;
+package de.simonsator.partyandfriends.velocity.partytoggle.chatmanager;
 
 import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
 import de.simonsator.partyandfriends.api.pafplayers.PAFPlayer;
