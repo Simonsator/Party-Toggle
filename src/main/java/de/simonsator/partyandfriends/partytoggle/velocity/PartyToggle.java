@@ -2,14 +2,15 @@ package de.simonsator.partyandfriends.partytoggle.velocity;
 
 import de.simonsator.partyandfriends.velocity.api.pafplayers.OnlinePAFPlayer;
 import de.simonsator.partyandfriends.velocity.api.party.abstractcommands.PartySubCommand;
+import de.simonsator.partyandfriends.partytoggle.chatmanager.UniversalChatManager;
 
 import java.util.List;
 
 public class PartyToggle extends PartySubCommand {
-	private final ChatManager CHAT_MANAGER;
+	private final UniversalChatManager CHAT_MANAGER;
 	private final PTConfig CONFIG;
 
-	protected PartyToggle(List<String> pCommands, int pPriority, String pHelp, ChatManager pChatManager, PTConfig pConfig) {
+	protected PartyToggle(List<String> pCommands, int pPriority, String pHelp, UniversalChatManager pChatManager, PTConfig pConfig) {
 		super(pCommands, pPriority, pHelp, pConfig.getString("Permission"));
 		CHAT_MANAGER = pChatManager;
 		CONFIG = pConfig;

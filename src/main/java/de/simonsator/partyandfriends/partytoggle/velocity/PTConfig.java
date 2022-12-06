@@ -10,7 +10,7 @@ import java.io.IOException;
 public class PTConfig extends ConfigurationCreator {
 
 	protected PTConfig(File file, PAFExtension pPlugin) throws IOException {
-		super(file, pPlugin);
+		super(file, pPlugin, true);
 		readFile();
 		loadDefaultValues();
 		saveFile();
