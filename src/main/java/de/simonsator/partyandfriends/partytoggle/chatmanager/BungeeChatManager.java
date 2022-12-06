@@ -17,7 +17,7 @@ public class BungeeChatManager extends UniversalChatManager implements Listener 
 		String message = pEvent.getMessage();
 		if (message.startsWith("/"))
 			return;
-		if (!hasPartyChatEnabled(player.getUniqueId()))
+		if (hasPartyChatNotEnabled(player.getUniqueId()))
 			return;
 		pEvent.setCancelled(executeChat(PAFPlayerManager.getInstance().getPlayer(player.getUniqueId()), message));
 	}

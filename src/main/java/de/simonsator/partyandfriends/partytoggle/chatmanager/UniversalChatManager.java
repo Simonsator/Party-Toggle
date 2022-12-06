@@ -2,7 +2,6 @@ package de.simonsator.partyandfriends.partytoggle.chatmanager;
 
 import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
 import de.simonsator.partyandfriends.api.pafplayers.PAFPlayer;
-import de.simonsator.partyandfriends.api.pafplayers.PAFPlayerManager;
 import de.simonsator.partyandfriends.api.party.PartyManager;
 import de.simonsator.partyandfriends.api.party.PlayerParty;
 import de.simonsator.partyandfriends.party.command.PartyChat;
@@ -32,8 +31,8 @@ public class UniversalChatManager {
 		return true;
 	}
 
-	protected boolean hasPartyChatEnabled(UUID pUUID) {
-		return players.contains(pUUID);
+	protected boolean hasPartyChatNotEnabled(UUID pUUID) {
+		return !players.contains(pUUID);
 	}
 
 	public void remove(UUID pUUID) {
