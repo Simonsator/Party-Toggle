@@ -4,6 +4,7 @@ import de.simonsator.partyandfriends.api.PAFExtension;
 import de.simonsator.partyandfriends.api.adapter.ServerSoftware;
 import de.simonsator.partyandfriends.party.command.PartyCommand;
 import de.simonsator.partyandfriends.partytoggle.chatmanager.BungeeChatManagerFactory;
+import de.simonsator.partyandfriends.partytoggle.chatmanager.SpigotChatManagerFactory;
 import de.simonsator.partyandfriends.partytoggle.chatmanager.UniversalChatManager;
 
 import java.io.File;
@@ -20,6 +21,9 @@ public class PTMain extends PAFExtension {
 			switch (serverSoftware) {
 				case BUNGEECORD:
 					chatManager = BungeeChatManagerFactory.createChatManager();
+					break;
+				case SPIGOT:
+					chatManager = SpigotChatManagerFactory.createChatManager();
 					break;
 				default:
 					throw new RuntimeException("Unsupported server software " + serverSoftware);
