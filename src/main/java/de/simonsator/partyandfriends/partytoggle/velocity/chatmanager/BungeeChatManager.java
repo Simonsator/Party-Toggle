@@ -1,4 +1,4 @@
-package de.simonsator.partyandfriends.partytoggle.chatmanager;
+package de.simonsator.partyandfriends.partytoggle.velocity.chatmanager;
 
 import de.simonsator.partyandfriends.api.pafplayers.PAFPlayerManager;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
